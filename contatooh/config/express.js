@@ -9,10 +9,10 @@ module.exports = function(){
 	app.set('port', 3000);
 
 	// middleware
-	app.use(express.static('./public'));
+	app.use(express.static('./app'));
 
 	app.set('view engine', 'ejs');
-	app.set('views', './app/views');
+	app.set('views', './views');
 
 	load('models', {cwd: 'app'})
 		.then('controllers')
