@@ -1,6 +1,7 @@
 // config/express.js
 var express = require('express');
-var load = require('express-load');
+var home = require('../app/routes/home');
+//var load = require('express-load');
 
 module.exports = function(){
 	var app = express();
@@ -9,15 +10,16 @@ module.exports = function(){
 	app.set('port', 3000);
 
 	// middleware
-	app.use(express.static('./app'));
-
+	app.use(express.static('./public'));
 	app.set('view engine', 'ejs');
-	app.set('views', './views');
+	app.set('views', './app/views');
 
-	load('models', {cwd: 'app'})
+	/* load('models', {cwd: 'app'})
 		.then('controllers')
 		.then('routes')
-		.into(app);
+		.into(app); */
+
+	home(app);
 
 	return app;
 }
