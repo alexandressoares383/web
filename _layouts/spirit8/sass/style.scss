@@ -34,6 +34,10 @@ ul{
 			display: block;
 			float: left;
 		}
+		a:hover {
+		  color: #FFFFFF !important;
+		  text-decoration: none !important;
+		}
 	}
 	.navegacao{
 		float: right;
@@ -48,11 +52,16 @@ ul{
 					text-align: center;
 					font-size: 13px;
     				margin-left: 40px;
+    				padding-bottom:15px;
 				}
 				.link:hover{
 					color: #FFFFFF;
-					border-bottom:3px solid red;
-					background:url("../images/barra.png") no-repeat bottom center;
+					background:url("../images/barra.jpg") no-repeat bottom center;
+					text-decoration: none;
+				}
+				.link.active{
+					color: #FFFFFF;
+					background:url("../images/barra.jpg") no-repeat bottom center;
 					text-decoration: none;
 				}
 			}
@@ -309,14 +318,93 @@ ul{
 			width: 100%;
 			overflow: hidden;
 			margin: 0px;
-  			padding: 0;
+  			padding: 0px;
 			.item_works{
 				float: left;
-				margin:0px 0px 25px 25px;
+				a{
+					margin:0px 22px 22px 0px;
+					display: block;
+				}
+				
 			}
-			.item_works.first{
-				margin:0px
-			} 
+		}
+	}
+}
+
+.testimonials{
+	background:#0b0b0b;
+	padding:100px 0px;
+}
+
+.formulario{
+	padding:100px 0px;
+	.t_formulario{
+		color: #222222;
+	}
+	p.text_formulario {
+	  color: #6c6c6c;
+	  font-family: 'Open Sans', sans-serif;
+	  font-size: 16px;
+	  font-style: italic;
+	  text-align: center;
+	  margin-top: 41px;
+	  width: 103%;
+	}
+	.c-form{
+		color: #636363;
+		margin-top:100px;
+		.controle.rotulo{
+			display: inline-block;
+			float: left;
+
+		}
+		.controle.nome{
+			width: 46.5%;
+			float: left;
+			display: block;
+			margin-bottom: 30px;
+			.campo{
+				display: block;
+				width: 100%;
+				height: 40px;
+				border:1px solid #999999;
+			}
+		}
+		.controle.email{
+			width: 46.5%;
+			display: block;
+			float: right;
+			margin-bottom: 30px;
+			.campo{
+				display: block;
+				width: 100%;
+				height: 40px;
+				border:1px solid #999999;
+			}
+		}
+		.controle.mensagem{
+			width: 100%;
+			display: block;
+			margin-bottom: 30px;
+		}
+		.controle.mensagem{
+			.campo{
+				width: 100%;
+				display: block;
+				height: 165px;
+				border:1px solid #999999;
+			}
+		}
+		input.btn-enviar {
+			  width: 165px;
+			  height: 40px;
+			  border: none;
+			  float: right;
+			  background: #fcac45;
+			  color: #FFFFFF;
+			  font-family: 'Open Sans', sans-serif;
+			  font-weight: 700;
+			  font-size: 16px;
 		}
 	}
 }

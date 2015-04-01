@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="http://picssel.com/scripts/fancybox2.1.5/jquery.fancybox.css" />
+	<link rel="stylesheet" href="http://picssel.com/scripts/fancybox2.1.5/helpers/jquery.fancybox-buttons.css" />
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,12 +19,12 @@
 			</div>
 			<nav class="navegacao">
 				<ul class="lista">
-					<li class="item"><a href="#" class="link">Home</a></li>
-					<li class="item"><a href="#" class="link">About</a></li>
-					<li class="item"><a href="#" class="link">Services</a></li>
-					<li class="item"><a href="#" class="link">Portfolio</a></li>
-					<li class="item"><a href="#" class="link">Testimonials</a></li>
-					<li class="item"><a href="#" class="link">Contact</a></li>
+					<li class="item"><a href="#home" class="link">Home</a></li>
+					<li class="item"><a href="#about-us" class="link">About</a></li>
+					<li class="item"><a href="#services" class="link">Services</a></li>
+					<li class="item"><a href="#portfolio" class="link">Portfolio</a></li>
+					<li class="item"><a href="#testimonials" class="link">Testimonials</a></li>
+					<li class="item"><a href="#contact" class="link">Contact</a></li>
 				</ul>
 			</nav>
 			<article class="header_description">
@@ -35,7 +37,7 @@
 		</div>
 	</header>
 
-	<section class="about_us">
+	<section id="about-us" class="about_us">
 		<div class="container">
 			<img src="images/fashion.png" alt="Trend and fashion" class="trend-and-fashion">
 			<article class="description_about_us">
@@ -135,7 +137,7 @@
 		</div>
 	</section>
 
-	<section class="our_services">
+	<section id="services" class="our_services">
 		<div class="container">
 			<h2 class="title t_our_services">TAKE A LOOK AT <strong>OUR SERVICES</strong></h2>
 			<p class="texto text_our_services">
@@ -185,47 +187,88 @@
 		</div>
 	</section>
 
-	<section class="our_work">
+	<section id="portfolio" class="our_work">
 		<div class="container">
 			<h2 class="title t_our_work">TAKE A LOOK AT <strong>OUR WORK</strong></h2>
 			<p class="text_our_work">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 			<div class="filtro">
 				<h4>FILTER BY TYPE</h4>
-				<ul id="source" class="lista_filtro">
-					<li class="item-filtro"><a href="#">All</a> | </li>
-					<li class="item-filtro"><a href="#">Web Design</a> | </li>
-					<li class="item-filtro"><a href="#">Mobile Design</a> | </li>
-					<li class="item-filtro"><a href="#">Photography</a></li>
+				<ul id="galleryTab" class="lista_filtro">
+					<li class="item-filtro"><a href="#" data-rel="all"  href="javascript:;" class="filter active">All</a> | </li>
+					<li class="item-filtro"><a href="#" data-rel="web-design" href="javascript:;" class="filter">Web Design</a> | </li>
+					<li class="item-filtro"><a href="#" data-rel="mobile-design" href="javascript:;" class="filter">Mobile Design</a> | </li>
+					<li class="item-filtro"><a href="#" data-rel="photography" href="javascript:;" class="filter">Photography</a></li>
 				</ul>
-				<ul id="destination" class="lista_works">
-					<li class="item_works first"><a href=""><img src="images/galeria/foto01.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto01.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto01.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto01.jpg" alt=""></a></li>
-					<li class="item_works first"><a href=""><img src="images/galeria/foto02.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto02.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto02.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto02.jpg" alt=""></a></li>
-					<li class="item_works first"><a href=""><img src="images/galeria/foto03.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto03.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto03.jpg" alt=""></a></li>
-					<li class="item_works"><a href=""><img src="images/galeria/foto03.jpg" alt=""></a></li>
-				</ul>
+				<div class="galleryWrap">
+					<ul class="lista_works">
+						<li class="item_works"><a data-filter="web-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto01.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="photography" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto01.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="web-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto01.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="mobile-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto01.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="web-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto02.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="photography" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto02.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="mobile-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto02.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="mobile-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto02.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="web-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto03.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="mobile-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto03.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="web-design" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto03.jpg" alt=""></a></li>
+						<li class="item_works"><a data-filter="photography" href="" class="fancybox" data-fancybox-group="gallery"><img src="images/galeria/foto03.jpg" alt=""></a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="testimonials">
+	<section id="testimonials"  class="testimonials">
 		<div class="container">
 			<h2 class="title t_testimonials">OUR CLIENTS' TESTIMONIALS</h2>	
+			<ul class="test-descricao">
+				<li>
+					<span>
+						This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+					</span>
+					<span class="author"><strong>Dean Martin</strong>, CEO Acme Inc.</span>
+				</li>
+				<li>
+					<span>
+						This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+					</span>
+					<span class="author"><strong>Dean Martin</strong>, CEO Acme Inc.</span>
+				</li>
+				<li>
+					<span>
+						This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+					</span>
+					<span class="author"><strong>Dean Martin</strong>, CEO Acme Inc.</span>
+				</li>
+			</ul>
 		</div>
 		
 	</section>
 
-	<section class="formulario">
+	<section id="contact" class="formulario">
 		<div class="container">
-			<h2></h2>
-			<p></p>
+			<h2 class="title t_formulario">FEEL FREE TO <strong>CONTACT US</strong></h2>
+			<p class="text_formulario">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p>
+			<div class="c-form">
+				<form action="">
+					<div class="controle nome">
+						<label for="" class="rotulo">Nome *</label>
+						<input type="text" class="campo" />
+					</div>
+					<div class="controle email">
+						<label for="" class="rotulo">Email *</label>
+						<input type="text" class="campo" />
+					</div>
+					<div class="controle mensagem">
+						<label for="" class="rotulo">Mensagem *</label>
+						<textarea class="campo" /></textarea>
+					</div>
+					<div class="controle">
+						<input type="submit" class="btn-enviar" />
+					</div>
+				</form>
+			</div>
 		</div>
 	</section>
 
@@ -235,7 +278,9 @@
 	</footer>
 	<script src="js/jquery-2.1.3.min.js"></script>
 	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/jquery.quicksand.js"></script>
+	<script src="http://picssel.com/scripts/fancybox2.1.5/jquery.fancybox.pack.js"></script>
+	<script src="http://picssel.com/scripts/fancybox2.1.5/helpers/jquery.fancybox-buttons.js"></script>
+	<script class="js/main.js"></script>
 	<script>
 	$(document).ready(function(){
 		$(window).load(function(){
@@ -246,13 +291,44 @@
 				itemWidth: 275,
 				maxItems: 4
 			});
-			$('.flex_our_clients').flexslider({
-				animation: "slide",
-				animationLoop: false,
-				directionNav: false,
-				itemWidth: 275,
-				maxItems: 1
-			});
+		});
+
+		$('.item-filtro a').click(function(e){
+			e.preventDefault();
+		});
+
+		$(function ($) {
+		    $(".fancybox").fancybox({
+		        modal: true,
+		        helpers: {
+		            buttons: {}
+		        } 
+		    });
+
+		    $(".filter").on("click", function () {
+		        var $this = $(this);
+
+		        if ( !$this.hasClass("active") ) {
+		            $(".filter").removeClass("active");
+		            $this.addClass("active"); 
+
+		            var $filter = $this.data("rel"); 
+
+		            $filter == 'all' ? 
+		                $(".fancybox")
+		                .attr("data-fancybox-group", "gallery")
+		                .not(":visible")
+		                .fadeIn() 
+		            : 
+		                $(".fancybox")
+		                .fadeOut(0)
+		                .filter(function () {
+		                    return $(this).data("filter") == $filter; 
+		                })
+		                .attr("data-fancybox-group", $filter)
+		                .fadeIn(1000); 
+		        }
+		    });
 		});
 	});
 
