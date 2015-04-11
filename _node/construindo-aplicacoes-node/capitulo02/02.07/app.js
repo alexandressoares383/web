@@ -12,6 +12,7 @@ app.set('view options', { layout: true });
 app.set('views', __dirname + '/views');
 
 app.get('/stooges/chat', function(req, res, next) {
+  // Carrega o template
   res.render('chat');
 });
 
