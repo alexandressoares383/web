@@ -4,11 +4,11 @@ module.exports = function(config, mongoose, nodemailer){
 	var AccountSchema = new mongoose.Schema({
 		email: {type: String, unique: true},
 		password: {type: String},
-		name{
+		name: {
 			first: {type: String},
 			last:  {type: String}
 		},
-		birthday{
+		birthday: {
 			day: 	{type: Number, min:1, max: 31, required: false},
 			month:  {type: Number, min:1, max: 12, required: false}, 
 			year: 	{type: Number}
@@ -80,7 +80,7 @@ module.exports = function(config, mongoose, nodemailer){
 				first: firstName,
 				last: lastName
 			},
-			password: shaSum.digest('hex');
+			password: shaSum.digest('hex')
 		});
 		user.save(registerCallback);
 		console.log('Save command was sent');
