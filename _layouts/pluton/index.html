@@ -2,9 +2,21 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tema</title>
-	<link rel="stylesheet" href="">
+	<title>Pluton</title>
+	<!-- Load css styles -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css" />
+
+     <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
 </head>
 <body>
 	<div class="navbar">
@@ -20,12 +32,12 @@
 				<div class="nav-collapse collapse pull-right">
 					<ul class="nav" id="top-navigation">
 						<li class="active"><a href="#home">Home</a></li>
-						<li><a href="#home">Services</a></li>
-						<li><a href="#home">Portfólio</a></li>
-						<li><a href="#home">About</a></li>
-						<li><a href="#home">Clients</a></li>
-						<li><a href="#home">Price</a></li>
-						<li><a href="#home">Contact</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#portfolio">Portfólio</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#clients">Clients</a></li>
+						<li><a href="#price">Price</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -122,8 +134,210 @@
 				<h1>Have You Seen our Works?</h1>
                 <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
 			</div>
+			<ul class="nav nav-pills">
+				<li class="filter" data-filter="all">
+					<a href="#noAction">All</a>
+				</li>
+				<li class="filter" data-filter="web">
+					<a href="#noAction">Web</a>
+				</li>
+				<li class="filter" data-filter="photo">
+					<a href="#noAction">Photo</a>
+				</li>
+				<li class="filter" data-filter="identity">
+					<a href="#noAction">Identity</a>
+				</li>
+			</ul>
+			<div id="single-project">
+				<div id="slidingDiv" class="toggleDiv row-fluid single-project">
+					<div class="span6">
+						<img src="images/Portfolio01.png" alt="project 1">
+					</div>
+					<div class="span6">
+						<div class="project-description">
+							<div class="project-title clearfix">
+								<h3>Website for Some Client</h3>
+								<span class="show_hide close">
+									<i class="icon-cancel"></i>
+								</span>
+							</div>
+							<div class="project-info">
+								<div>
+									<span>Client</span>Some Client Name
+								</div>
+								<div>
+									<span>Date</span>July 2013
+								</div>
+								<div>
+									<span>Skills</span>HTML5, CSS3, JavaScript
+								</div>
+								<div>
+									<span>Link</span>http://examplecomp.com
+								</div>
+								<p>Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div id="slidingDiv1" class="toggleDiv row-fluid single-project">
+					<div class="span6">
+						<img src="images/Portfolio02.png" alt="project 1">
+					</div>
+					<div class="span6">
+						<div class="project-description">
+							<div class="project-title clearfix">
+								<h3>Website for Some Client</h3>
+								<span class="show_hide close">
+									<i class="icon-cancel"></i>
+								</span>
+							</div>
+							<div class="project-info">
+								<div>
+									<span>Client</span>Some Client Name
+								</div>
+								<div>
+									<span>Date</span>July 2013
+								</div>
+								<div>
+									<span>Skills</span>HTML5, CSS3, JavaScript
+								</div>
+								<div>
+									<span>Link</span>http://examplecomp.com
+								</div>
+								<p>Life is a song - sing it. Life is a game - play it. Life is a challenge - meet it. Life is a dream - realize it. Life is a sacrifice - offer it. Life is love - enjoy it.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="slidingDiv2" class="toggleDiv row-fluid single-project">
+					<div class="span6">
+						<img src="images/Portfolio03.png" alt="project 1">
+					</div>
+					<div class="span6">
+						<div class="project-description">
+							<div class="project-title clearfix">
+								<h3>Website for Some Client</h3>
+								<span class="show_hide close">
+									<i class="icon-cancel"></i>
+								</span>
+							</div>
+							<div class="project-info">
+								<div>
+									<span>Client</span>Some Client Name
+								</div>
+								<div>
+									<span>Date</span>July 2013
+								</div>
+								<div>
+									<span>Skills</span>HTML5, CSS3, JavaScript
+								</div>
+								<div>
+									<span>Link</span>http://examplecomp.com
+								</div>
+								<p>How far you go in life depends on your being tender with the young, compassionate with the aged, sympathetic with the striving and tolerant of the weak and strong. Because someday in your life you will have been all of these.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="slidingDiv3" class="toggleDiv row-fluid single-project">
+					<div class="span6">
+						<img src="images/Portfolio04.png" alt="project 1">
+					</div>
+					<div class="span6">
+						<div class="project-description">
+							<div class="project-title clearfix">
+								<h3>Website for Some Client</h3>
+								<span class="show_hide close">
+									<i class="icon-cancel"></i>
+								</span>
+							</div>
+							<div class="project-info">
+								<div>
+									<span>Client</span>Some Client Name
+								</div>
+								<div>
+									<span>Date</span>July 2013
+								</div>
+								<div>
+									<span>Skills</span>HTML5, CSS3, JavaScript
+								</div>
+								<div>
+									<span>Link</span>http://examplecomp.com
+								</div>
+								<p>Life's but a walking shadow, a poor player, that struts and frets his hour upon the stage, and then is heard no more; it is a tale told by an idiot, full of sound and fury, signifying nothing.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="slidingDiv5" class="toggleDiv row-fluid single-project">
+					<div class="span6">
+						<img src="images/Portfolio05.png" alt="project 1">
+					</div>
+					<div class="span6">
+						<div class="project-description">
+							<div class="project-title clearfix">
+								<h3>Website for Some Client</h3>
+								<span class="show_hide close">
+									<i class="icon-cancel"></i>
+								</span>
+							</div>
+							<div class="project-info">
+								<div>
+									<span>Client</span>Some Client Name
+								</div>
+								<div>
+									<span>Date</span>July 2013
+								</div>
+								<div>
+									<span>Skills</span>HTML5, CSS3, JavaScript
+								</div>
+								<div>
+									<span>Link</span>http://examplecomp.com
+								</div>
+								<p>We need to give each other the space to grow, to be ourselves, to exercise our diversity. We need to give each other space so that we may both give and receive such beautiful things as ideas, openness, dignity, joy, healing, and inclusion.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="slidingDiv6" class="toggleDiv row-fluid single-project">
+					<div class="span6">
+						<img src="images/Portfolio06.png" alt="project 1">
+					</div>
+					<div class="span6">
+						<div class="project-description">
+							<div class="project-title clearfix">
+								<h3>Website for Some Client</h3>
+								<span class="show_hide close">
+									<i class="icon-cancel"></i>
+								</span>
+							</div>
+							<div class="project-info">
+								<div>
+									<span>Client</span>Some Client Name
+								</div>
+								<div>
+									<span>Date</span>July 2013
+								</div>
+								<div>
+									<span>Skills</span>HTML5, CSS3, JavaScript
+								</div>
+								<div>
+									<span>Link</span>http://examplecomp.com
+								</div>
+								<p>I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-
+	<!-- ScrollUp button end -->
+    <!-- Include javascript -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.cslider.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
