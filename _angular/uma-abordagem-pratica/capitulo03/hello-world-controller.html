@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular - Capitulo 03</title>
+</head>
+<body>
+	<div ng-controller="HelloWorldController">
+	    <h1>Hello {{nome}} !</h1>
+	</div>
+
+	<script src="../lib/angular.min.js"></script>
+	<script type="text/javascript">
+	function HelloWorldController($scope){
+		$scope.nome = "World";
+	}
+	</script>
+</body>
+</html>

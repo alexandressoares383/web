@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone-no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+	<title>Our Application</title>
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.2.0.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.2.0.js"></script>
+	<script src="cordova.ios.js"></script>
+	<script>
+		$(document).on("pageinit", function(){
+		});
+	</script>
+</head>
+<body>
+	<div data-role="page" id="main">
+	<div data-role="header" class="logo">
+		<h2>KeyChain Plugin</h2>
+	</div>
+	<div data-role="content">
+		<input type="text" name="password" id="password" placeholder="Enter password to store" />
+
+		<input id="savepassword" type="button" value="Save Password" />
+		<input id="getpassword" type="button" value="Get Password" />
+
+	</div>
+	</div>
+</div>
+</body>
+</html>

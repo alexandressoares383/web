@@ -1,0 +1,31 @@
+function onSelectNotesSuccess(tx, results) {
+	dbresults = results;
+	var len = results.rows.length;
+	for(var i = 0; i<len; i++) {
+		$("#notelist").append("<li><a href=#newnote onclick='itemindex=" + i + ";'>" + results.rows.item(i).notetitle + "</a></li>");
+	}
+	$("#notelist").listview("refresh");
+	}
+
+$("#savenote").bind("tap", function(){
+	notedata.notetitle = $("#notetitle").val();
+	notedata.notedetail = $("#notedetail").val();
+	notedata.imagesource =  $("#noteimage").attr("src");
+	notedata.notelat = lat;
+	notedata.notelon = lon;
+	db.transaction(saveNote, onDbError, onDbSuccess);
+});
+
+function saveNote(tx) {
+	tx.executeSql("INSERT INTO NOTES (notetitle, notedetail, imagesource, notelat, notelon) VALUES (?, ?, ?, ?, ?)",[notedata.notetitle, notedata.notedetail, notedata.imagesource, notedata.notelat, notedata.notelon]);
+}
+
+
+$('#newnote').live('pagecreate', function(event){
+	if(itemindex >= 0) {
+		item = dbresults.rows.item(itemindex);
+		notedata = {notetitle:item.notetitle, notedetail:item.notedetail, imagesource:item.imagesource, notelat:item.notelat, notelon:item.notelon};
+	}  
+	var html = Mustache.to_html(notetemplate, notedata);
+	$("#notedetailcontent").html(html);
+}); 

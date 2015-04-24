@@ -1,0 +1,28 @@
+<div data-role="page" id="main">
+	<div data-role="header" class="logo">
+		<img src="img/logo.png" />
+	</div>
+	<div data-role="content">
+		<ul id="notelist" data-role="listview">
+
+		</ul>
+
+		<a href="#newnote" data-role="button" data-icon="plus">New Note</a>
+
+	</div>
+
+	<div data-role="footer" data-theme="c">
+		<h2 class="offline">Offline Mode</h2>
+	</div>
+
+</div>
+<div data-role="page" id="newnote">
+	<div data-role="header" class="logo">
+		<img src="img/logo.png" />
+	</div>
+	<div id="notedetailcontent" data-role="content">
+	</div>
+	<div data-role="footer" data-theme="c">
+		<p>SnapNote!</p>
+	</div>
+</div>
