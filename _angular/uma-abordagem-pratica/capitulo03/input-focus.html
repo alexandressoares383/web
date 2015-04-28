@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular - Capitulo 03</title>
+	<style>
+		p{
+			background-color: #FEFBF3;
+			padding: 15px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" /><br />
+	<input type="text" /><br />
+	<input type="text" apply-focus /><br />
+    <input type="text"><br />
+
+	<script src="js/angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module('myApp',[]).directive('applyFocus', function(){
+			return{
+				link:function(scope,element, attrs){
+					element[0].focus();
+				}
+			};
+		});
+	</script>
+</body>
+</html>

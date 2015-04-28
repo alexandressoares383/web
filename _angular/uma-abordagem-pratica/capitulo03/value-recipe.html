@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular - Capitulo 03</title>
+</head>
+<body>
+	<div ng-controller="TwitterController">
+	    <span><b>Token: </b>{{token}}</span>
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script type="text/javascript">
+		// cria um módulo
+		var app = angular.module('myApp',[]);
+		
+		app.value('$twitterApiToken','YTEyMzQ1NjU0MzIxeA=='); // Declaração Token
+
+		app.controller('TwitterController', ['$scope', '$twitterApiToken', function($scope, $twitterApiToken){
+			$scope.token = $twitterApiToken;
+		}]
+		);
+	</script>
+</body>
+</html>
