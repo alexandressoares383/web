@@ -29,7 +29,7 @@
 					var button = angular.element('<button>Increment ParentController count through Directive</button>');
 					button.on('click', function(){
 						scope.$apply(function(){
-
+							scope.count++;
 						});
 					});
 					ele.append(button);
