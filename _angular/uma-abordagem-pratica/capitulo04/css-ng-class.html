@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular - Capitulo 04 - Formulario</title>
+	<style>
+		.redclass{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="ClassController">
+    	<div ng-class="getDivClass()">Hello World</div>
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myApp',[]);
+		app.controller('ClassController',['$scope', function($scope){
+			$scope.getDivClass = function(){return "redclass";}
+		}]);
+	</script>
+</body>
+</html>

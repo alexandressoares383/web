@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular - Capitulo 04 - Formulario</title>
+	<style>
+		.error{
+			background-color: red;
+		}
+		.warning{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="ClassController">
+    	<div ng-class='{error: isError, warning: isWarning}'>Eu sou um texto!</div>
+    	<button ng-click="showError()">Simular Erro</button>
+    	<button ng-click="showWarning()">Simular Warning</button>
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module('myApp',[]);
+		app.controller('ClassController',['$scope', function($scope){
+			$scope.isError=false;
+			$scope.isWarning=false;
+			$scope.showError = function(){
+				$scope.isError = true;
+				$scope.isWarning = false;
+			};
+			$scope.showWarning = function(){
+				$scope.isWarning = true;
+				$scope.isError = false;
+			}
+		}]);
+	</script>
+</body>
+</html>
