@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular - Capitulo 06 - Diretivas</title>
+</head>
+<body>
+	
+	<div ng-controller="MyController">
+		<ul>
+			<li ng-repeat="item in itens">
+				[Indice: {{$index}}]
+				{{item.id}} - {{item.nome}}
+			</li>
+		</ul>
+	</div>
+
+	<script src="js/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module('MyApp',[]);
+		app.controller('MyController',['$scope', function($scope){
+			$scope.itens = [
+				{id:'1', nome: 'Alexandre'},
+				{id:'2', nome: 'Leticia'},
+				{id:'3', nome: 'Marilena'},
+				{id:'4', nome: 'Douglas'},
+			];
+		}]);
+		
+	</script>
+</body>
+</html>
