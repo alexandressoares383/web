@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular - Capitulo 07 - Ciclo de Vida</title>
+</head>
+<body>
+	
+	<div run-tasks />
+
+</body>
+
+<script src="js/angular.min.js"></script>
+
+<script type="text/javascript">
+	angular.module('app', []).directive('runTasks', ['$timeout', function($timeout){
+		return{
+			link: function(scope, element, attrs, controller) {
+				// Assinatura de $timeout => $timeout(fn, milliseconds)
+				// execute agora
+				$timeout(function() {
+					element.append('<p><i>$timeout 1</i> executa após $evalAsync!</p>')
+				});
+
+				scope.$evalAsync(function(){
+					element.append('<p><b>$evalAsync</b> executa primeirto!</p>');
+				});
+
+				// execute agora
+				$timeout(function(){
+					element.append('<p><i>$timeout 2</i> executa após $evalAsync!</p>')
+				});
+			}
+		};
+	}]);
+	
+</script>
+</html>
